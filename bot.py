@@ -1,14 +1,15 @@
 import discord
+import random
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = '!')
+bot = commands.Bot(command_prefix = '!')
 
-@client.event
+@bot.event
 async def on_ready():
     print("Hei botten har starta bro")
 
-@client.command()
-async def ping(ctx):
-    await ctx.send(f'Pong!')
+@bot.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
 
-client.run('ODI0MzQ3NDkyMjQxODk5NTUy.YFuDbQ.O7k6dU3U5w7nU-FpTqD8n-xrVKU')
+bot.run('ODI0MzQ3NDkyMjQxODk5NTUy.YFuDbQ.O7k6dU3U5w7nU-FpTqD8n-xrVKU')
